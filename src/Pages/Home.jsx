@@ -9,12 +9,16 @@ const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/products')
+        axios.get(`${base_url}/products`)
             .then(response => setProducts(response.data))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
     // if we use [] rub only once after the initial render
     // if we use [id] triggers when state changes
+
+
+    const base_url = process.env.REACT_APP_NODE_ENV === 'development' ? process.env.REACT_APP_LOCAL_BASE_URL : process.env.REACT_APP_SERVER_BASE_URL;
+
 
     return (
         <div className="p-10">
