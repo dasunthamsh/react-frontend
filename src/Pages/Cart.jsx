@@ -60,7 +60,7 @@ const Cart = ({ loggedInUser }) => {
                             <th className="border-b-2 p-2">Product</th>
                             <th className="border-b-2 p-2">Price</th>
                             <th className="border-b-2 p-2">Quantity</th>
-                            <th className="border-b-2 p-2">Total</th>
+                            <th className="border-b-2 p-2">Totalss</th>
                             <th className="border-b-2 p-2">Actions</th>
                         </tr>
                         </thead>
